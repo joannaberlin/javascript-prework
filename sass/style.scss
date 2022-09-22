@@ -1,0 +1,92 @@
+/* Variables */
+
+$font-text: 'Raleway', sans-serif;
+$main-color: rgb(251, 124, 215);
+
+
+*, *::before, *::after {
+    box-sizing: border-box; }
+
+    body {
+        margin: 0;
+        text-align: center;
+        font-family: $font-text;
+    }
+
+    h2 {
+        font-size: 50px;
+        border: 2px solid;
+        border-radius: 10px;
+        background-color: $main-color;
+        padding: 10px;
+        margin-top: 10px;
+    }
+
+    .container p {
+        font-size: 18px;
+    }
+
+    .board {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .btn {
+        display: inline-block;
+        border: none;
+        background: #fff;
+	    border-color: #fff;
+	    border-style: solid;
+        cursor: pointer;
+        img {
+            width: 250px;
+        }
+    }
+
+    #button-paper img, #button-scissors img {
+        padding-bottom: 23px;
+    }
+
+    #button-rock img {
+        width: 270px;
+    }
+
+    #messages, #result {
+        font-size: 20px;
+        padding: 10px;
+        margin: 5px;
+        line-height: 1.7;
+        font-weight: 800;
+    }
+
+    /* Animated arrow */ 
+
+    .stage i {
+        font-size: 40px;
+    }
+
+    .stage {
+        display: flex;
+        height: 150px;
+    }
+    .box {
+        align-self: flex-end;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        background-color: #fff;
+        margin: 0 auto 0 auto;
+        transform-origin: bottom;
+    }
+    .bounce-1 {
+        animation-name: bounce-1;
+        animation-timing-function: linear;
+    }
+    @keyframes bounce-1 {
+        0%   { transform: translateY(0); }
+        50%  { transform: translateY(-100px); }
+        100% { transform: translateY(0); }
+    }
+
+      

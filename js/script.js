@@ -14,44 +14,41 @@ function buttonClicked(argButtonName) {
   function getMoveName(argMoveId) {
     console.log('wywołano funkcję getMoveName z argumentem: ' + argMoveId);
   if (argMoveId == 1) {
-    return 'kamień';
+    return 'rock';
   } else if (argMoveId == 2) {
-    return 'papier';
+    return 'paper';
   } else if (argMoveId == 3) {
-    return 'nożyce'
+    return 'scissors'
   } 
 }
 
 function displayResult(argPlayerMove, argComputerMove) {
   console.log('wywołano funkcję displayResults z argumentami: ' + argPlayerMove + ', ' + argComputerMove);
-  if (argPlayerMove == 'papier' && argComputerMove == 'kamień') {
-    printMessage('Wygrywasz!');
+  if (argPlayerMove == 'paper' && argComputerMove == 'rock') {
+    printMessage('You win!');
     playerWin = true;
-  } else if (argPlayerMove == 'kamień' && argComputerMove == 'nożyce') {
-    printMessage('Wygrywasz!');
+  } else if (argPlayerMove == 'rock' && argComputerMove == 'scissors') {
+    printMessage('You win!');
     playerWin = true;
-  } else if (argPlayerMove == 'nożyce' && argComputerMove == 'papier') {
-    printMessage('Wygrywasz!');
+  } else if (argPlayerMove == 'scissors' && argComputerMove == 'paper') {
+    printMessage('You win!');
     playerWin = true;
   } else if (argPlayerMove == argComputerMove) {
-    printMessage('Remis <3');
+    printMessage('Draw <3');
   } else {
-    printMessage('Przegrywasz :(');
+    printMessage('You lose :(');
     computerWin = true;
   }
-  printMessage('Zagrałem ' + argComputerMove + ', a Ty ' + argPlayerMove);
+  printMessage('I played ' + argComputerMove + ', you played ' + argPlayerMove);
 }
 
 function countWins() {
- 
- 
-
   if (playerWin) {
     playerWins += 1;
   } else if (computerWin) {
     computerWins += 1;
   }
-  printWinsMessage('Komputer: ' + computerWins + ' Ja: ' + playerWins);
+  printWinsMessage('Me: ' + computerWins + ' You: ' + playerWins);
 }
 
 let playerWin;
@@ -65,9 +62,9 @@ displayResult(playerMove, computerMove);
 countWins();
 }
 
-buttonRock.addEventListener('click', function(){ buttonClicked('kamień'); });
-buttonPaper.addEventListener('click', function(){ buttonClicked('papier'); });
-buttonScissors.addEventListener('click', function(){ buttonClicked('nożyce'); });
+buttonRock.addEventListener('click', function(){ buttonClicked('rock'); });
+buttonPaper.addEventListener('click', function(){ buttonClicked('paper'); });
+buttonScissors.addEventListener('click', function(){ buttonClicked('scissors'); });
 
-//po kliknięciu w button dodawała się wartość do wyniku Player lub Komputera
-//
+
+

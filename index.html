@@ -2,18 +2,32 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Kamień, papier, nożyce</title>
+	<title>Rock, paper, scissors</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css">
+	<link
+		rel="stylesheet"
+		href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"
+	>
 </head>
 <body>
-	<div class="container">
-		<div id="buttons">
-			<button id="button-rock" type="submit">Rock</button>
-			<button id="button-paper" type="submit">Paper</button>
-			<button id="button-scissors" type="submit">Scissors</button>
+	<div class="board">
+		<div class="container">
+			<h2>Welcome to Rock Paper Scissors Game</h2>
+			<p>Click one of to the buttons and start the game</p>
+			<div class="stage">
+				<div class="box bounce-1"><i class="fa-solid fa-arrow-down"></i></div>
+			</div>
+			<div id="buttons">
+				<button id="button-rock" class="btn" type="submit"><img src="./images/rock.jpg" alt="rock"></button>
+				<button id="button-paper" class="btn" type="submit"><img src="./images/paper.jpg" alt="paper"></button>
+				<button id="button-scissors" class="btn" type="submit"><img src="./images/scissors.jpg" alt="scissors"></button>
+			</div>
+			<div id="messages"></div>
+			<div id="result"></div>
 		</div>
-		<div id="messages"></div>
-		<div id="result"></div>
 	</div>
 	<script src="js/functions.js"></script>
 	<script src="js/script.js"></script>
