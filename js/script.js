@@ -1,9 +1,9 @@
-let buttonRock = document.getElementById('button-rock');
-let buttonPaper = document.getElementById('button-paper');
-let buttonScissors = document.getElementById('button-scissors');
+const buttonRock = document.getElementById('button-rock');
+const buttonPaper = document.getElementById('button-paper');
+const buttonScissors = document.getElementById('button-scissors');
 
-let computerWins = 0;
-let playerWins = 0;
+let comuputerWinsSum = 0;
+let playerWinsSum = 0;
 
 function buttonClicked(argButtonName) {
   
@@ -44,19 +44,19 @@ function displayResult(argPlayerMove, argComputerMove) {
 
 function countWins() {
   if (playerWin) {
-    playerWins += 1;
+    playerWinsSum += 1;
   } else if (computerWin) {
-    computerWins += 1;
+    comuputerWinsSum += 1;
   }
-  printWinsMessage('Me: ' + computerWins + ' You: ' + playerWins);
+  printWinsMessage('Me: ' + comuputerWinsSum + ' You: ' + playerWinsSum);
 }
 
 let playerWin;
 let computerWin;
-let playerMove = argButtonName;
-let randomNumber = Math.floor(Math.random() * 3 + 1);
+const playerMove = argButtonName;
+const randomNumber = Math.floor(Math.random() * 3 + 1);
 console.log('wylosowana liczba to: ' + randomNumber);
-let computerMove = getMoveName(randomNumber);
+const computerMove = getMoveName(randomNumber);
 console.log('ruch komputera to: ' + computerMove);
 displayResult(playerMove, computerMove);
 countWins();
