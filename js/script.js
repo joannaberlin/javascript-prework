@@ -6,7 +6,7 @@ let comuputerWinsSum = 0;
 let playerWinsSum = 0;
 
 function buttonClicked(argButtonName) {
-  
+
   clearMessages();
   clearWinsMessage();
   console.log(argButtonName + ' został kliknięty');
@@ -19,28 +19,23 @@ function buttonClicked(argButtonName) {
     return 'paper';
   } else if (argMoveId == 3) {
     return 'scissors'
-  } 
+  }
 }
 
 function displayResult(argPlayerMove, argComputerMove) {
-  console.log('wywołano funkcję displayResults z argumentami: ' + argPlayerMove + ', ' + argComputerMove);
-  if (argPlayerMove == 'paper' && argComputerMove == 'rock') {
+  if ((argPlayerMove == 'paper' && argComputerMove == 'rock') ||
+      (argPlayerMove == 'rock' && argComputerMove == 'scissors') ||
+      (argPlayerMove == 'scissors' && argComputerMove == 'paper')) {
     printMessage('You win!');
-    playerWin = true;
-  } else if (argPlayerMove == 'rock' && argComputerMove == 'scissors') {
-    printMessage('You win!');
-    playerWin = true;
-  } else if (argPlayerMove == 'scissors' && argComputerMove == 'paper') {
-    printMessage('You win!');
-    playerWin = true;
+     playerWin = true;
   } else if (argPlayerMove == argComputerMove) {
     printMessage('Draw <3');
   } else {
     printMessage('You lose :(');
-    computerWin = true;
+     computerWin = true;
   }
-  printMessage('I played ' + argComputerMove + ', you played ' + argPlayerMove);
-}
+   printMessage('I played ' + argComputerMove + ', you played ' + argPlayerMove);
+ }
 
 function countWins() {
   if (playerWin) {
